@@ -28,9 +28,6 @@ class _AcrylicChildren extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      Container(
-        color: Colors.yellow,
-      ),
       Align(
         alignment: AlignmentDirectional.topStart,
         child: Row(

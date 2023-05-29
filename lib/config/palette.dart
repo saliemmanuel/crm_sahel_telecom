@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Pallete {
+class Palette {
   static const Color primaryColor = Color(0xFFFF6600);
 
   static const MaterialColor swatch = MaterialColor(0xFFFF6600, {

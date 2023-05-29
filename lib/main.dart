@@ -1,7 +1,7 @@
 import 'package:crm_sahel_telecom/views/login.dart';
 import 'package:fluent_ui/fluent_ui.dart';
-
 import 'package:bitsdojo_window/bitsdojo_window.dart';
+import 'config/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,5 +11,9 @@ void main() async {
     win.title = "crm sahel telecom";
     win.show();
   });
-  runApp(const FluentApp(debugShowCheckedModeBanner: false, home: Login()));
+  runApp(FluentApp(
+      title: "crm sahel telecom",
+      theme: ThemeApp.lightTheme(),
+      debugShowCheckedModeBanner: false,
+      home: const Login()));
 }

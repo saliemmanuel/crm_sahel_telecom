@@ -1,7 +1,5 @@
-import 'package:bitsdojo_window/bitsdojo_window.dart';
+import 'package:crm_sahel_telecom/widget/windows_app_bar.dart';
 import 'package:fluent_ui/fluent_ui.dart';
-
-import 'custom_windows_button.dart';
 
 class BodyApp extends StatelessWidget {
   final Widget child;
@@ -11,33 +9,13 @@ class BodyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return NavigationView(
         content: Column(children: [
-      WindowTitleBarBox(
-        child: Container(
-          color: Colors.white,
-          child: Row(children: [
-            Expanded(
-                child: MoveWindow(
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10.0, vertical: 2),
-                    child: Image.asset(
-                      'assets/logo.png',
-                      height: 30.0,
-                      width: 30.0,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  const Text("Sahel Telecom"),
-                ],
-              ),
-            )),
-            const WindowButtons()
-          ]),
-        ),
-      ),
-      Expanded(child: Container(color: Colors.white, child: child))
+      const WindowsAppBar(),
+      Expanded(
+          child: Padding(
+        padding: const EdgeInsets.only(top: 40, right: 35.0),
+        child:
+            ClipRRect(borderRadius: BorderRadius.circular(15.0), child: child),
+      ))
     ]));
   }
 }

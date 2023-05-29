@@ -17,12 +17,9 @@ class ServiceApi {
   connexion({String? email, String? password, var context}) async {
     try {
       if (isEmail(email!)) {
-        var data = await http
-            .post(host.baseUrl(endpoint: "utilisateur/connexion"), body: {
-          "email": email,
-          'password': password,
-          "device_name": 'telephone.$email'
-        });
+        var data = await http.post(
+            host.baseUrl(endpoint: "utilisateur/connexion"),
+            body: {"EMAIL": email, 'MOTDEPASSE': password});
         var response = await jsonDecode(data.body);
         if (data.statusCode > 201) {
           Navigator.pop(context);

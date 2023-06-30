@@ -49,6 +49,7 @@ dependencies:
   bitsdojo_window: ^0.1.5
   bilions_ui: ^1.0.19
   lottie: ^2.3.2
+  syncfusion_flutter_datagrid: ^21.2.8
   
 
 
